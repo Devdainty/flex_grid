@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+
+        body{
+            background-color: rgb(26,28,40);
+        }
+
+        .container{
+            width: 600px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: 200px 80px 120px;
+            grid-template-areas: 
+                'a a a b b'
+                'c c d d d'
+                'c c e e e'
+            ;
+            grid-gap: 15px;
+            margin: 0 auto;
+        }
+
+        .container div{
+            padding: 2em;
+        }
+
+        .bg1{
+            background-color: rgb(235,80,32);
+            grid-area: a;
+        }
+
+        .bg2{
+            background-color: rgb(255,164,1);
+            grid-area: b;
+        }
+
+        .bg3{
+            background-color: rgb(5,170,66);
+            grid-area: c;
+        }
+
+        .bg4{
+            background-color: rgb(1,174,253);
+            grid-area: d;
+    
+        }
+
+        .bg5{
+            background-color: rgb(1,174,253);
+            grid-area: e;
+        }
+
+        header{
+        background-color: #00CCCC;
+        }
+
+        header p{
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1em;
+        }
+
+        header a{
+            text-decoration: none;
+            color: #001414;
+        }
+
+        header a:hover{
+            color: #EBEBEB;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p><a href="index.html">Grid Task</a></p>
+    </header>
+
+    <div class="container">
+        <div class="items bg1"></div>
+        <div class="items bg2"></div>
+        <div class="items bg3"></div>
+        <div class="items bg4"></div>
+        <div class="items bg5"></div>
+    </div>
+</body>
+</html>
